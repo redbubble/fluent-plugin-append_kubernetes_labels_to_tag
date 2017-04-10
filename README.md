@@ -6,6 +6,13 @@
 
 This plugin is intended for use with the [kuberenetes_metadata_filter](https://github.com/fabric8io/fluent-plugin-kubernetes_metadata_filter) plugin. You will need to filter with `kubernetes_metadata_filter` so that your log records have the `kubernetes` attribute loaded with the required data.
 
+## TODO
+
+[ ] Open source this gem
+  * [ ] Stop relying on a Redbubble-owned Docker image for the build
+  * [ ] Publish to Rubygems.org
+  * [ ] Make repo public
+
 ## Usage
 
 In your Gemfile:
