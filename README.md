@@ -35,7 +35,7 @@ In your Fluent config:
 <filter **>
   @type append_kubernetes_labels_to_tag
   
-  labels ['log_destination']
+  labels label1,label2
 </filter>
 ```
 
