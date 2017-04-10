@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/redbubble/fluent-plugin-append_kubernetes_labels_to_tag"
   gem.license       = "Copyright (c) Redbubble 2017. All rights reserved."
 
-  gem.files         = `git ls-files`.split($/)
+  gem.files = Dir['lib/**/*'] + %w(Gemfile README.md fluent-plugin-append-kubernetes-labels-to-tag.gemspec)
   gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
