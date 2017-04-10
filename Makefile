@@ -20,9 +20,9 @@ build: ## Create the docker image.
 
 test: ## Run the app tests.
 	@echo "--- :fire: Testing :fire:"
-	docker-compose -f docker-compose.test.yml run --rm web
+	docker run --rm --workdir=/app -v `pwd`:/app redbubble/debian-ruby-2.3 script/docker-rspec.sh
 
-push: ## Publish on Gemfury
+push: ## Publish the gem
 	@echo "TODO: Make the gem publish work"
 	exit 1
 
