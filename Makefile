@@ -20,7 +20,7 @@ build: ## Create the docker image.
 
 test: ## Run the app tests.
 	@echo "--- :fire: Testing :fire:"
-	docker run --rm --workdir=/app -v `pwd`:/app -e BUNDLE_PATH=/app/gems ruby:2.3 script/docker-rspec.sh
+	docker run --rm --workdir=/app -v `pwd`:/app -e BUNDLE_PATH=/app/.gems ruby:2.3 script/docker-rspec.sh
 
 push: ## Publish the gem
 	@echo "TODO: Make the gem publish work"
