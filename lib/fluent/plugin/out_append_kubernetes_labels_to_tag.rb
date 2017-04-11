@@ -36,7 +36,7 @@ module Fluent
     end
 
     def event(tag, time, record)
-      new_tag = if record.has_key? 'kubernetes' && record['kubernetes'].has_key? 'labels'
+      new_tag = if record.has_key?('kubernetes') && record['kubernetes'].has_key?('labels')
         kubernetes_labels_tag_appender.append(tag, record['kubernetes']['labels'])
       else
         tag
