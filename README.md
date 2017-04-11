@@ -32,11 +32,11 @@ In your Fluent config:
   
 </filter>
 
-<filter **>
+<match **>
   @type append_kubernetes_labels_to_tag
   
   labels label1,label2
-</filter>
+</match>
 ```
 
 ## Contributions
