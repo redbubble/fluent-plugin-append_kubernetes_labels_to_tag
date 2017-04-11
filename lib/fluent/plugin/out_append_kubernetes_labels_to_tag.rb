@@ -14,17 +14,17 @@ module Fluent
 
     def emit(tag, es, chain)
       es.each do |time, record|
+        puts record
         events(tag, time, record).each do |(tag, time, record)|
           router.emit(tag, time, record)
         end
       end
 
       chain.next
-
-    rescue
-      log.error "Failed to re-format docker record #{record}"
-      # this seems to be a way to safely swallow records we don't know how to format
-      ""
+  # rescue
+  #   log.error "Failed to re-format docker record #{record}"
+  #   # this seems to be a way to safely swallow records we don't know how to format
+  #   ""
     end
 
     private
