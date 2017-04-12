@@ -25,5 +25,11 @@ describe KubernetesLabelsTagAppender do
 
       expect(described_class.new(labels).event('lol', time, record)[0]).to eq('lol.foo=.baz=')
     end
+
+    it 'raises an error to prevent re-emission if the tag has not changed' do
+      record = { 'kubernetes' => { 'foo' => 'bar' } }
+
+      expect { described_class.new(labels).event('lol', time, record) }.to raise_error(KubernetesLabelsTagAppender::ReEmitException)
+    end
   end
 end

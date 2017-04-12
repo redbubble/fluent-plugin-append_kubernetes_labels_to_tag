@@ -1,4 +1,7 @@
 class KubernetesLabelsTagAppender
+  class ReEmitException < Exception
+  end
+
   attr_reader :labels
 
   def initialize(labels)
@@ -17,6 +20,8 @@ class KubernetesLabelsTagAppender
               else
                 tag
               end
+
+    raise ReEmitException.new('Will not re-emit because the tag has not changed.') if new_tag == tag
 
     [
       new_tag,
