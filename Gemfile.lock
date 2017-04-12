@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fluent-plugin-append-kubernetes-labels-to-tag (0.0.3.pre.alpha3)
+    fluent-plugin-append-kubernetes-labels-to-tag (0.0.3.pre.alpha5)
       fluentd (>= 0.12.0)
 
 GEM
