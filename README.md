@@ -1,6 +1,8 @@
 # fluent-plugin-append_kubernetes_labels_to_tag
 
-## A Fluent plugin to add kubernetes container labels to the log tag
+**Note: Redbubble no longer use or maintain this gem**
+
+A Fluent plugin to add kubernetes container labels to the log tag
 
 ## Prerequisites
 
@@ -27,14 +29,14 @@ In your Fluent config:
 ```
 <filter **>
   @type kubernetes_metadata_filter # See 'Prerequisites' above
-  
+
   ...
-  
+
 </filter>
 
 <match **>
   @type append_kubernetes_labels_to_tag
-  
+
   labels label1,label2
 </match>
 ```
