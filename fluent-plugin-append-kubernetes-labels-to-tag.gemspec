@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "fluent-plugin-append-kubernetes-labels-to-tag"
-  gem.version       = "0.0.1"
+  gem.version       = "0.0.3-alpha5"
   gem.authors       = ["Redbubble Delivery Engineering Team"]
   gem.email         = ["delivery-engineers@redbubble.com"]
   gem.description   = %q{Filter plugin to append certain Kubernetes labels to the Fluentd tag}
   gem.summary       = %q{Filter plugin to append certain Kubernetes labels to the Fluentd tag}
   gem.homepage      = "https://github.com/redbubble/fluent-plugin-append_kubernetes_labels_to_tag"
-  gem.license       = "Copyright (c) Redbubble 2017. All rights reserved."
+  gem.license       = "MIT"
 
   gem.files = Dir['lib/**/*'] + %w(Gemfile README.md fluent-plugin-append-kubernetes-labels-to-tag.gemspec)
   gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
